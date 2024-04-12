@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Nouvelle demande de cotation</h2>
+
+  <form [formGroup]="quoteForm" (ngSubmit)="submitQuote()">
+    <div class="form-group">
+      <label for="title">Title :</label><br />
+      <input class="form-control" type="text" id="title" formControlName="title" />
+    </div>
+
+    <div class="form-group">
+      <label for="image">Photo du véhicule :</label><br />
+      <input class="form-control" type="file" id="image" (change)="onPhotoSelected($event)" formControlName="image" accept="image/*" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description :</label><br />
+      <textarea class="form-control" id="description" formControlName="description" rows="5"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="quoteForm.invalid">Envoyer la demande</button>
+  </form>
+</div>

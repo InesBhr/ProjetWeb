@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "argus-c8ee0"
+  },
+  "targets": {
+    "eventi-179d1": {
+      "hosting": {
+        "eventi-angular": [
+          "argus-c8ee0"
+        ]
+      }
+    },
+    "argus-c8ee0": {
+      "hosting": {
+        "eventi-angular": [
+          "dist"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
